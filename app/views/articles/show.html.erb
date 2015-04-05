@@ -1,0 +1,25 @@
+<h1>Article</h1>
+<hr>
+
+<div class="wrap-center">
+<p>
+	<strong>Title</strong>
+	<%= @article.title %>
+</p>
+
+<p>
+	<strong>Text</strong>
+	<%= @article.text %>
+</p>
+
+<h3>Comments</h3>
+
+<%= render @article.comments %>
+
+<h3>Add A Comment</h3>
+
+<%= render 'comments/form' %>
+
+<%= link_to 'Back', articles_path %>
+
+</div>
