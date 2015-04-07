@@ -20,16 +20,20 @@ body{
   background-color: #99CCFF;
 }
 
-img {
+#bubble {
 	display: block;
 	margin: 0 auto;
 }
 
 .wrap-center {
   margin:5px;
-/*  margin: 0 auto;
-  width: 300px;*/
+  margin: 0 auto;
+  width: 300px;
 
   display:block;
   text-align: center;
 }
+
+
+
+

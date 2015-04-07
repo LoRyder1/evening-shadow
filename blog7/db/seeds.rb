@@ -6,8 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(name: "bob", email: "bob@mail.com", password: "123")
+User.create!(name: "bob", email: "bob@mail.com", password: "password", password_confirmation: "password")
+
 
 5.times do
-	Article.create!(title: Faker::Commerce.department, text: Faker::Lorem.sentence, user_id: 1)
+	Article.create!(title: Faker::Company.name, text: Faker::Lorem.sentence, user_id: 1)
 end

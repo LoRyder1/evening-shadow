@@ -10,7 +10,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
-		@article = Article.new		
+		@article = Article.new
+
+		render :layout => false
 	end
 
 	def edit
@@ -19,11 +21,21 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = current_user.articles.new(article_params)
-		if @article.save
-			redirect_to articles_path
+		if request.xhr? && @article.save!
+			render json: {title: @article.title, id: @article.id}
+			# redirect_to articles_path
 		else
 			render 'new'
 		end
+		# if request.xhr? && @section.save!
+		# 	render json: {section: @section.name, id: @section.id}
+		# else
+		# 	redirect_to sections_path
+		# end
+
+
+
+
 	end
 
 	def update

@@ -15,15 +15,21 @@
 <% end %>
 
 <%= form_for @user do |f| %>
+
 	<p>
 		<%= f.text_field :name, placeholder: 'name' %>
 	</p>
+
 	<p>
 		<%= f.text_field :email, placeholder: 'email' %>
 	</p>
 
 	<p>
-		<%= f.password_field :password_hash, placeholder: 'password' %>
+		<%= f.password_field :password, placeholder: 'password' %>
+	</p>
+
+	<p>
+		<%= f.password_field :password_confirmation, placeholder: 'password confirmation' %>
 	</p>
 
 	<%= f.submit 'Sign Up' %>

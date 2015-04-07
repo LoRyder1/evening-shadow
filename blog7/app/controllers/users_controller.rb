@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_filter :redirect_if_logged_in
+	# before_filter :redirect_if_logged_in
 
 	def new
 		@user = User.new	
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
 	private
 	def user_params
-		params.require(:user).permit(:name,:email,:password)
+		params.require(:user).permit(:name,:email,:password,:password_confirmation)
 	end
 
 	def redirect_if_logged_in

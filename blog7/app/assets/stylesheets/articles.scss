@@ -15,7 +15,8 @@ $primary-font: Verdana, Geneva, sans-serif;
 }
 
 table {
-  width: 100%;
+  width: 70%;
+  display: inline-block;
   th {
   	font-family: $headline;
   	padding: 1%;
@@ -26,6 +27,18 @@ table {
   th, td {
   	border: 1px solid #bbb;
   }
+}
+
+.feature div {
+  display: inline-block;
+}
+
+.feature .navbar {
+  margin:50px 10px;
+  padding:0;
+  width:20%;
+  vertical-align: top;
+  background-color: yellow;
 }
 
 h1 {
@@ -44,4 +57,12 @@ h1 {
   margin: 0 auto;
   width: 300px;
   text-align: left;
+}
+
+.cr_artshow {
+  z-index: 3;
+  /*position: relative;*/
+  width: 400px;
+  top: 100px;
+  background-color: white;
 }
